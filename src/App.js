@@ -13,7 +13,7 @@ const State = lazy(() => retry(() => import('./components/State')));
 const LanguageSwitcher = lazy(() =>
   retry(() => import('./components/LanguageSwitcher'))
 );
-const Banner = lazy(() => retry(() => import('./components/Banner')));
+//const Banner = lazy(() => retry(() => import('./components/Banner')));
 
 const App = () => {
   const [showLanguageSwitcher, setShowLanguageSwitcher] = useState(false);
@@ -71,7 +71,7 @@ const App = () => {
 
       <Navbar {...{pages, showLanguageSwitcher, setShowLanguageSwitcher}} />
 
-      <Banner />
+  
 
       <Suspense fallback={<div />}>
         <Switch location={location}>
